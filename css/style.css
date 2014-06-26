@@ -1,0 +1,8 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	background: url(../image/bg.jpg) no-repeat right bottom fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
