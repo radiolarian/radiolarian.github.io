@@ -1,6 +1,7 @@
 body {
 	font-family: 'Roboto', sans-serif;
-	font-color: #fff;
+	color: #000000;
+	background: no-repeat left bottom fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -16,7 +17,7 @@ body:before {
     z-index: -1;
     top: 0;
     left: 0;
-    background: linear-gradient(rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.1) 100%);
+    background: linear-gradient(rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.5) 35%, rgba(255,255,255,0.1) 95%);
 }
 h1 {
 	font-size: 5em;

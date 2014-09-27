@@ -1,30 +1,25 @@
-<?php
-  //i'm sorry this is php i'm so lazy
-  $bg = array('1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg');
-  $i = rand(0, count($bg)-1); 
-  $selectedBg = "$bg[$i]";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta http-equiv="Content-type" content="small-module-text/html" charset="utf-8">
     <title>When is DJ Noon on Next?</title>
-    <link href="css/style.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300|Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
-    <style type="text/css">
-      <!-- body {
-      background: url(../image/<?php echo $selectedBg; ?>) no-repeat right bottom fixed;
-      } -->
-    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <script>
+    $(document).ready(function() {
+      var images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'];
+      $('body').css('background-image', 'url(image/' + images[Math.floor(Math.random() * images.length)] + ')');
+    });
+    </script>
   </head>
   <body>
-  <h1>when is dj noon on next?</h1>
-  <ul>
-    <li><b>sat 27 sept</b> 0330 - 0600</li>
-    <li><b>sat oct 4</b> 0330 - 0600</li>
-    <li><b>tue oct 7</b> 0330 - 0600</li>  
-  </ul>
-  <script src="js/analytics.js"></script>
+    <h1>when is dj noon on next?</h1>
+    <ul>
+      <li><b>sat 27 sept</b> 0330 - 0600</li>
+      <li><b>sat oct 4</b> 0330 - 0600</li>
+      <li><b>tue oct 7</b> 0330 - 0600</li>  
+    </ul>
+    <script src="js/analytics.js"></script>
   </body>
 </html>
