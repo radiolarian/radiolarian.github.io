@@ -1,6 +1,6 @@
 <?php
   //i'm sorry this is php i'm so lazy
-  $bg = array('1.jpg');
+  $bg = array('1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg');
   $i = rand(0, count($bg)-1); 
   $selectedBg = "$bg[$i]";
 ?>
@@ -13,11 +13,9 @@
     <link href="css/style.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300|Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
     <style type="text/css">
-      <!--
       body {
-      background: url(images/<?php echo $selectedBg; ?>) no-repeat right bottom fixed;
+      background: url(../image/<?php echo $selectedBg; ?>) no-repeat right bottom fixed;
       } 
-      -->
     </style>
   </head>
   <body>
