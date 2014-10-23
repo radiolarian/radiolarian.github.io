@@ -28,8 +28,9 @@ a, a:hover {
 	padding-right:.5em;
 }
 .noon:hover #noon-text {
-	top:5em;
-	left:3em;
+	position:relative;
+	top:0;
+	left:0;
 }
 .about {
 	background-image: url('../image/about.png');
@@ -69,6 +70,7 @@ a, a:hover {
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+	text-align: center;
 }
 .noon:hover {
 	background-image: url('../image/noonh.png');
