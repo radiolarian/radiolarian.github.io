@@ -257,7 +257,9 @@ game.CoinEntity = me.CollectableEntity.extend({
     onCollision: function() {
         // do something when collected
         game.data.score += 1; //LOOK HERE
-        game.data.numCollected += 1;
+        if (game.data.level=="FALL") {
+            game.data.numCollected += 1;
+        }
         me.audio.play("cling");
         // make sure it cannot be collected "again"
         this.body.setCollisionMask(me.collision.types.NO_OBJECT);
