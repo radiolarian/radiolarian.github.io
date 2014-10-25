@@ -154,8 +154,10 @@ game.PlayerEntity = me.Entity.extend({
                 game.data.score = 0;
                 game.data.level = "WINTER";
                 game.data.starGate.goTo("WINTER");
-                me.audio.pauseTrack();
-                me.audio.playTrack("winter");
+                me.audio.stopTrack();
+                if (!game.data.mute) {
+                        me.audio.playTrack("winter");
+                }
             }
         }
 
@@ -556,8 +558,10 @@ game.BossEntity = me.Entity.extend({
                     game.data.hacky.onDestroyEvent();
                     game.data.score = 0;
                     game.data.level = "FALL2";
-                    me.audio.pauseTrack();
-                    me.audio.playTrack("fall");
+                    me.audio.stopTrack();
+                    if (!game.data.mute) {
+                        me.audio.playTrack("fall");
+                    }
                     game.data.starGate.goTo("fall-easy");
 
             } else if(action === "right") {
@@ -602,6 +606,9 @@ game.StarGateEntity = me.LevelEntity.extend({
                 game.data.textBox = "NEED " + calc + " MORE STARS";
                 if (calc == 1) {
                     game.data.textBox = "NEED 1 MORE STAR";
+                } 
+                else if (calc >= 25) {
+                    game.data.textBox = "";
                 }                
             }
         } else {
@@ -611,23 +618,29 @@ game.StarGateEntity = me.LevelEntity.extend({
                 if (game.data.level == "SUMMER") {
                     this.goTo("area01");
                     me.audio.stopTrack();
-                    me.audio.playTrack("fall");
+                    if (!game.data.mute) {
+                        me.audio.playTrack("fall");
+                    }
                     game.data.level = "FALL";
                     return;
                 } else if (game.data.level == "SPRING"){
                     game.data.level = "SUMMER";
                     game.data.numCollected = 0;
                     this.goTo("summer");
-                    me.audio.pauseTrack();
-                    me.audio.playTrack("summer");
+                    me.audio.stopTrack();
+                    if (!game.data.mute) {
+                        me.audio.playTrack("summer");
+                    }
                     return;
                 }
                 else if (game.data.level == "FALL2") {
                     game.data.level = "WINTER2";
                     game.data.textBox = "";
                     this.goTo("winter2");
-                    me.audio.pauseTrack();
-                    me.audio.playTrack("winter");
+                    me.audio.stopTrack();
+                    if (!game.data.mute) {
+                        me.audio.playTrack("winter");
+                    }                    
                     return;
                 }
             } else {
