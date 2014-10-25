@@ -632,12 +632,13 @@ game.StarGateEntity = me.LevelEntity.extend({
                 }
             } else {
                 var calc = 25 - game.data.score;
-                if (calc < 25) {
                     game.data.textBox = "NEED " + calc + " MORE STARS";
-                }
                 if (calc == 1) {
                     game.data.textBox = "NEED 1 MORE STAR";
-                }  
+                } 
+                else if (calc >= 25) {
+                    game.data.textBox = "";
+                } 
             }
         }
     }   
