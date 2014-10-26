@@ -597,13 +597,13 @@ game.StarGateEntity = me.LevelEntity.extend({
     },
     onCollision : function () {
         if (game.data.level == "FALL") {
-            if (game.data.score > 25)
-                game.data.textBox = "YOU BROKE THE GAME!"
+            if (game.data.score >= 25)
+                game.data.textBox = "YOU'RE TOO GOOD! TRY STRUGGLING"
             else if (game.data.numCollected>29)
                 this.goTo("alpha");
             else {
                 var calc = 25 - game.data.score;
-                game.data.textBox = "NEED " + calc + " MORE STARS";
+                game.data.textBox = "NEED " + calc + " MORE STARS. TRY TO GET THEM ALL";
                 if (calc == 1) {
                     game.data.textBox = "NEED 1 MORE STAR";
                 } 
