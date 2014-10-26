@@ -603,7 +603,7 @@ game.StarGateEntity = me.LevelEntity.extend({
                 this.goTo("alpha");
             else {
                 var calc = 25 - game.data.score;
-                game.data.textBox = "NEED " + calc + " MORE. GET THEM ALL!";
+                game.data.textBox = "NEED " + calc + " MORE. TRY TO GET THEM ALL";
                 if (calc == 1) {
                     game.data.textBox = "NEED 1 MORE STAR";
                 } 
