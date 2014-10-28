@@ -23,6 +23,13 @@ h1 {
 	font-size: 5em;
 	line-height: 50%;
 }
+h1 {
+	font-size: 3em;
+}
+
 ul {
 	font-size: 2em;
+}
+a {
+	color: #555555;
 }
