@@ -41,7 +41,6 @@ a, a:hover {
     background-image: url('../image/abouth.png');
 }
 .game {
-    background-color: #F44444;
     background-image: url('../image/star-title.png');
     background-size: cover;
 }
