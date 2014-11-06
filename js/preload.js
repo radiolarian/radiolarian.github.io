@@ -10,4 +10,4 @@ function preload(images) {
     }
 }
 
-preload('../image/abouth.png, ../image/arth.png, ../image/star-titleh.png, ../image/travelh.png, ../image/cath.png, ../image/noonh.png');
+preload('../image/abouth.png, ../image/star-titleh.png, ../image/travelh.png,  ../image/arth.png, ../image/cath.png, ../image/noonh.png');
