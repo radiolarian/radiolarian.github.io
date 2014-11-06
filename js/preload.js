@@ -5,7 +5,6 @@ function preload(images) {
         imageArray = images.split(',');
         var imageObj = new Image();
         for(i=0; i<=imageArray.length-1; i++) {
-            document.write('<img src="' + imageArray[i] + '" />');
             imageObj.src=imageArray[i];
         }
     }
