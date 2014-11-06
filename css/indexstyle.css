@@ -1,18 +1,18 @@
 body {
-	font-family: 'Roboto', sans-serif;
-	color: #ffffff;
-	margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    margin: 0;
 }
 h1 {
-	font-size: 5em;
-	line-height: 85%;
+    font-size: 5em;
+    line-height: 85%;
 }
 ul {
-	font-size: 2em;
+    font-size: 2em;
 }
 
 a, a:hover {
-	color: #ffffff;
+    color: #ffffff;
 }
 
 #about-text, #travel-text, #game-text, #noon-text { 
@@ -23,60 +23,64 @@ a, a:hover {
 }
 
 .about:hover #about-text, .travel:hover #travel-text, .game:hover #game-text {
-	top:1em;
-	left:1em;
-	padding-right:.5em;
+    top:1em;
+    left:1em;
+    padding-right:.5em;
 }
 .noon:hover #noon-text {
-	position:relative;
-	top:0;
-	left:0;
+    position:relative;
+    top:0;
+    left:0;
 }
 .about {
-	background-image: url('../image/about.png');
-	background-size: cover;
-	background-position: left bottom;
+    background-image: url('../image/about.png');
+    background-size: cover;
+    background-position: left bottom;
 }
 .about:hover {
-	background-image: url('../image/abouth.png');
+    background-image: url('../image/abouth.png');
 }
 .game {
-	background-color: #F44444;
-	background: url('../image/star-title.png');
-	background-size: cover;
+    background-color: #F44444;
+    background-image: url('../image/star-title.png');
+    background-size: cover;
 }
 .game:hover {
-	background-image: url('../image/star-titleh.png');
+    background-image: url('../image/star-titleh.png');
 }
 .travel {
-	background: url('../image/travel.png');
-	background-size: cover;
-	background-position: left bottom;
+    background-image: url('../image/travel.png');
+    background-size: cover;
+    background-position: left bottom;
 
 }
 .travel:hover {
-	background-image: url('../image/travelh.png');
+    background-image: url('../image/travelh.png');
 }
 .art {
-	background: url('../image/portfolio.png');
-	background-size: cover;
+    background-image: url('../image/portfolio.png');
+    background-size: cover;
 }
 .art:hover {
-	background-image: url('../image/arth.png');
+    background-image: url('../image/arth.png');
 }
 .noon {
-	color: #ffffff;
-	background: url('../image/noon.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	text-align: center;
+    color: #ffffff;
+    background-image: url('../image/noon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
 }
 .noon:hover {
-	background-image: url('../image/noonh.png');
+    background-image: url('../image/noonh.png');
 }
-.dj {
-	background-color: #FF337E;
+.cat {
+    background-image: url('../image/cat.png');
+    background-size: cover;
+}
+.cat:hover {
+    background-image: url('../image/cath.png');
 }
 
 /* columns of same height styles */
@@ -94,6 +98,7 @@ a, a:hover {
     display:table-cell;
     float:none;
 }
+/*
 @media (min-width: 768px) {
     .container-sm-height {
         display:table;
@@ -135,11 +140,8 @@ a, a:hover {
         display:table-cell;
         float:none;
     }
-}
-/* firefox fix */
-.img-responsive {
-    width: 100%;
-}
+}*/
+
 /* vertical alignment styles */
 .col-top {
     vertical-align:top;
