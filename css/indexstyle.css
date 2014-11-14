@@ -81,6 +81,15 @@ a, a:hover {
 .cat:hover {
     background-image: url('../image/cath.png');
 }
+.preload {
+    position: absolute;
+    overflow: hidden;
+    left: -9999px; 
+    top: -9999px;
+    height: 1px;
+    width: 1px;
+}
+
 
 /* columns of same height styles */
 .container-xs-height {
