@@ -30,6 +30,9 @@ h1 {
 ul {
 	font-size: 2em;
 }
+ul.past {
+	font-size: 1em;
+}
 a {
-	color: #555555;
+	color: #fff;
 }
