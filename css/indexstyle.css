@@ -27,6 +27,13 @@ a, a:hover {
     left:1em;
     padding-right:.5em;
 }
+
+.travel:hover #travel-text {
+    font-size:3em;
+    line-height: 120%;
+
+}
+
 .noon:hover #noon-text {
     position:relative;
     top:0;
@@ -48,13 +55,13 @@ a, a:hover {
     background-image: url('../image/star-titleh.png');
 }
 .travel {
-    background-image: url('../image/travel.png');
+    background-image: url('../image/projh.png');
     background-size: cover;
     background-position: left bottom;
 
 }
 .travel:hover {
-    background-image: url('../image/travelh.png');
+    background-image: url('../image/proj.png');
 }
 .art {
     background-image: url('../image/portfolio.png');

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Assignment 3</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/clean-blog.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    div.img {
+        float:left;
+    }
+    pre {
+        text-align: left;
+    }
+    </style>
+
+</head>
+
+<body>
+    <!-- Page Header -->
+    <!-- Set your background ge for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('img/t.png')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>Assignment 3: Bezier Surfaces<br/><br/></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p><a href="http://inst.cs.berkeley.edu/~CS184-ck/#ass2">Kyle Boss</a> and I made a program which takes bezier control points and outputs a corresponding image. It supports: </p>
+                    <p><ul>
+                        <li>Uniform and adaptive ('-a') tessellation (step size or "error" check specified by the second command line argument)
+                <li> Filled and wireframe viewing
+                <li> Smooth and flat shading
+                <li> Keyboard control for rotations, translations, and zoom
+                    </ul> </p>
+                </ul> </p>
+
+                    <p>
+                    <iframe width="800" height="448" src="https://www.youtube.com/embed/KOGi_XhcbsI" frameborder="0" allowfullscreen></iframe>
+                    </p>
+
+                    <h2 class="section-heading">Examples</h2>
+
+
+                    <center>
+
+                        <p><b>Arch</b> </p>
+                        <img class="img-responsive" src="img/as3/image-01.png">
+                        <pre>./Bez2Poly test.bez .01 (wireframe)</pre>
+
+                        <img class="img-responsive" src="img/as3/image-02.png">
+                        <pre>./Bez2Poly test.bez .01 (smooth shading)</pre>
+                       
+                        <img class="img-responsive" src="img/as3/image-03.png">
+                        <pre>./Bez2Poly test.bez .01 (wireframe)</pre>
+
+                        <img class="img-responsive" src="img/as3/image-04.png">
+                        <pre>./Bez2Poly test.bez .01 -a (flat)</pre>
+                       
+                        <img class="img-responsive" src="img/as3/image-05.png">
+                        <pre>./Bez2Poly test.bez .001 -a (wireframe)</pre>
+
+                        <img class="img-responsive" src="img/as3/image-06.png">
+                        <pre>./Bez2Poly test.bez .001 -a (smooth)</pre>
+                       
+            
+                        <p><b>Teapot</b> </p>
+                        <img class="img-responsive" src="img/as3/image-07.png">
+                        <pre>./Bez2Poly teapot.bez .1 (wireframe)</pre>
+
+                        <img class="img-responsive" src="img/as3/image-08.png">
+                        <pre>./Bez2Poly teapot.bez .1 (flat)</pre>
+                       
+                        <img class="img-responsive" src="img/as3/image-09.png">
+                        <pre>./Bez2Poly test.bez .01 (wireframe)</pre>
+
+                        <img class="img-responsive" src="img/as3/image-10.png">
+                        <pre>./Bez2Poly teapot.bez .05 -a (wireframe)</pre>
+
+                        <img class="img-responsive" src="img/as3/image-11.png">
+                        <pre> ./Bez2Poly teapot.bez .01 -a (wireframe</pre>
+                       
+                        <img class="img-responsive" src="img/as3/image-12.png">
+                        <pre>./Bez2Poly teapot.bez .01 -a (smooth)</pre>
+
+                        <img class="img-responsive" src="img/as3/image-13.png">
+                        <pre>./Bez2Poly teapot.bez .25 (wireframe)</pre>
+                                              
+                        <p><b>Teaspoon</b> </p>
+                        <img class="img-responsive" src="img/as3/image-14.png">
+                        <pre>./Bez2Poly teaspoon.bez .15 (wireframe)</pre>
+
+                        <img class="img-responsive" src="img/as3/image-15.png">
+                        <pre>./Bez2Poly teaspoon.bez .15 (smooth)</pre>
+                       
+                        <img class="img-responsive" src="img/as3/image-16.png">
+                        <pre>./Bez2Poly teaspoon.bez .15 (flat)</pre>
+
+                        <img class="img-responsive" src="img/as3/image-17.png">
+                        <pre>./Bez2Poly teaspoon.bez .2 -a (wireframe)</pre>
+
+                        <img class="img-responsive" src="img/as3/image-18.png">
+                        <pre>./Bez2Poly teaspoon.bez .005 -a (wireframe)</pre>
+                       
+                        <img class="img-responsive" src="img/as3/image-19.png">
+                        <pre>./Bez2Poly teaspoon.bez .005 -a (smooth)</pre>
+
+                        <img class="img-responsive" src="img/as3/image-20.png">
+                        <pre>./Bez2Poly teaspoon.bez .005 -a (flat)</pre>
+                          
+            
+                        <p><b>Teacup</b> </p>
+                        <img class="img-responsive" src="img/as3/image-26.png">
+                        <pre>./Bez2Poly teacup.bez .1 (wireframe)</pre>
+
+                        <img class="img-responsive" src="img/as3/image-27.png">
+                        <pre>./Bez2Poly teacup.bez .1 (flat)</pre>
+
+                        <img class="img-responsive" src="img/as3/image-28.png">
+                        <pre>./Bez2Poly teacup.bez .1 (smooth)</pre>
+                       
+                        <img class="img-responsive" src="img/as3/image-29.png">
+                        <pre>./Bez2Poly teacup.bez .01 -a (wireframe)</pre>
+
+                        <img class="img-responsive" src="img/as3/image-30.png">
+                        <pre>./Bez2Poly teacup.bez .01 -a (flat)</pre>
+                          
+                        <img class="img-responsive" src="img/as3/image-31.png">
+                        <pre>./Bez2Poly teacup.bez .01 -a (smooth)</pre>
+                          
+                    </center>
+                    
+
+
+
+                       
+                    <ul class="pager">
+                        <li class="next">
+                            <a href="index.html">&larr; Back</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
