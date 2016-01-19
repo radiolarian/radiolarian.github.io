@@ -5,6 +5,14 @@
  */
 @import url(https://fonts.googleapis.com/css?family=Lora:400,700,400italic|Raleway:400,500);
 
+@font-face{ 
+	font-family: 'dietdidotextra';
+	src: url('../fonts/dietdidot_extra-webfont.eot');
+	src: url('../fonts/dietdidot_extra-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/dietdidot_extra-webfont.woff') format('woff'),
+	     url('../fonts/dietdidot_extra-webfont.svg#webfont') format('svg');
+}
+
 html, body {
 	margin:0;
 	padding:0;
