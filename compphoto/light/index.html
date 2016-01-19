@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Lightfield Camera: CS194, Jingyi Li</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Lightfield Camera
+                    <small>Jingyi Li, cs194-bx</small>
+                </h1>
+                <p>In this assignment, I implemented two effects using real lightfield data: depth refocusing and aperture adjustment. </p> <br/>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Depth Refocusing
+                </h1>
+                <p>As <a href="http://graphics.stanford.edu/papers/lfcamera/lfcamera-150dpi.pdf">this paper</a> by our very own Ren Ng describes, we can create "lightfields" of objects by taking photographs of them from various planes orthogonal to the optic axis. I used the data available in the <a href="http://lightfield.stanford.edu/lfs.html">Stanfrod Light Field Archive</a> to reconstruct some lightfield effects.</p>
+                <p>I chose the amethyst to demonstrate depth refocusing, since she's a cool character on Steven Universe. The light fields were available as a 17x17 grid of images, all offset from each other. By calculating the difference of each image from the center point, and shifting its location by that times scaling factor, and finally averaging over all 289 images, I was able to emulate a camera lens refocusing. I used scales from -2 to 2, in .25 step increments. A more negative scale corresponded to the back of the object being in focus, while a positive one corresponded to the front.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 portfolio-item">
+                    <img class="img-responsive" src="img/f.gif" alt="">
+                    <p><br/>If you stare at it long enough, it looks like the crystals are alive.</P>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Aperture Adjustment
+                </h1>
+                <p>You can also emulate adjusting the aperture/field of view with lightfield data. This is done by setting a "radius" of photos, defined by their distance away from the center point, to use in the average. The larger the radius, the greater the depth of field. I demonstrate this on both the amethyst and the refractive ball.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 portfolio-item">
+                    <img class="img-responsive" src="img/am.gif" alt="">
+            </div>
+            <div class="col-md-6 portfolio-item">
+                    <img class="img-responsive" src="img/ap.gif" alt="">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="page-header">Bell & Whistle: Own Lightfield Data
+                </h1>
+                <p>I recently found a website which sold really cute Japanese plushies for really cheap, and because I have no self control, I bought 10 things. They've been arriving one at a time, so I decided to try to model light field data using them. To the right we see a Baymax, Flareon, Cyndaquil, and some bamboo I bought myself from 99 Ranch. We also see my curtain as a fancy backdrop.</p>
+                <p>I tried to create a 5x5 grid of these objects and took 25 photos in total to run my depth refocusing and aperture adjustment algorithms on.</p>
+                <p>Unfortunately, things did not work out so well. I am not a Lytro camera and my manual moving of the camera around the objects was neither well calibrated nor very precise. As a result, all the averages are very off. Furthermore, I had no way of measuring what a "pixel" in real life would be, so I had to do some experimentation on the scaling of how many digital pixels to actually shift—especially since my camera images are like 5000x7000px, so I had to resize them.</p>
+                <p>While it may not look like how it's "supposed to", the blurred images give a cool paintery effect!</p>
+            </div>
+            <div class="col-md-6 portfolio-item">
+                    <img class="img-responsive" src="img/base.jpg" alt="">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 portfolio-item">
+                    <img class="img-responsive" src="img/me-f.gif" alt="">
+                    <br><p>After some experimentation, I used a scale from 13-17 with increments of 1. Ironically, since I think 15 was the closest converging scaling factor, the depth refocusing looks more like an aperture adjustment! You can also see border artifacts since the pixels were rolled so much.</p>
+            </div>
+            <div class="col-md-6 portfolio-item">
+                    <img class="img-responsive" src="img/me-ap.gif" alt="">
+                    <br><p>Since it was only a 5x5 grid, I have a 4 frame animation. I mean, it does get out of focus very quickly...</p>
+            </div>
+        </div>
+
+
+<div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Takeaways
+                    
+                </h1>
+                <p>This project was very simple, which I greatly appreciated. In it I learned that you too can start a multi-million company with a few matrix operations...given that you have very talented hardware engineers, that is. I also learned to appreciate the ingenuity of the lightfield's simple but powerful dual grid structure.</p>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

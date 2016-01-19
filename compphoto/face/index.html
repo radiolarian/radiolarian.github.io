@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Face Morphing: CS194, Jingyi Li</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Face Morphing
+                    <small>Jingyi Li, cs194-bx</small>
+                </h1>
+                <p>In this assignment, I implemented smooth face morphing between two images. I also calculated the mean face of the Danish, extrapolated it for a caricature, played with the perceived gender of my face, and made a smashing music video.</p> <br/>
+            </div>
+            <div class="row">
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/h.jpg" alt="">
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/hannigram.gif" alt="">
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/m.jpg" alt="">
+            </div>
+        </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Face Morphing
+                </h1>
+                <p>As pixel coordinates span a linear subspace, we may change their relationships and create "warped" images (in this case, used for morphing faces to each other.)</p>
+                <p>The first step is to select a bunch of matching image correspondance pairs. Here, we will use Bjoern and Eric as our guinea pigs. After we've selected the points and add in the corner points of the image, we can define an <i>alpha</i> to interpolate to a common point location (such as <i>alpha=.5</i>, a midpoint). We then use Delaunay triangulation on these points to get a nice mesh of triangles to manipulate: since it's the dual of Voronoi cells, it makes triangles fat to help prevent non-local warping (aka ugly results).
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 portfolio-item">
+                    <img class="img-responsive" src="img/ex/pts.png" alt="">
+                <h3>
+                    Initial Point Selection
+                </h3>
+            </div>
+            <div class="col-md-6 portfolio-item">
+                    <img class="img-responsive" src="img/ex/download.png" alt="">
+                <h3>
+                    Delaunay triangulation overlayed
+                </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Once we get the triangles, we can use some linear algebra to compose their affine transformation matrix (in homogenous coordinates, which means the last row is 0s except a 1 in the right corner). As we learned in class, going from the source image to the target image might result in some sampling issues and blank pixels: instead, we will take the inverse of this transformation matrix and apply it to our desired image pixel locations, to get the pixel locations in the original image where we should sample our colors from.</p>
+                <p>Since the results of the matrix multiplication usually were not integer values like pixel locations, I just rounded to the nearest neighbor. Sadly, this occasionally produces some visible artifacts.</p>
+                <p>After we have the images warped, we can cross-fade their colors (again with some <i>alpha</i>) to get a combined photo! Were we in want of an animation, we can get multiple frames, and vary <i>alpha</i> from 0 to 1 in frame number of steps. </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/ex/fin1.jpg" alt="">
+                <h3>
+                    Bjoern warped to Eric's geometry (midpoint)
+                </h3>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/ex/actual_fin.jpg" alt="">
+                <h3>
+                    With colors crossfaded
+                </h3>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/ex/fin2.jpg" alt="">
+                <h3>
+                    Eric warped to Bjoern's geometry (midpoint)
+                </h3>
+                <p>My point selection probably wasn't the best as Bjoern had an ear and Eric didn't, so there are some artifacts.</p>
+            </div>
+        </div>
+       <div class="row">
+            <div class="col-lg-12">
+                <p>Below are some example animations, their original photos, and their middle frames. If you want to see all 45 frames of the Bjoern/Eric transition, check out <a href="https://www.dropbox.com/sh/vt80u2vihu0936p/AACw3dqlb_Tp58ptjeTaKeFIa?dl=0">this</a> Dropbox folder.</p><br/>
+            </div>
+        </div>
+                <div class="row">
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/bjoern.jpg" alt="">
+                <h3>
+                    Prof. Bjoern Hartmann
+                </h3>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/bjoerneric.gif" alt="">
+                <h3>
+                    Less terrifying than their Proj3 spawn.
+                </h3>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/eric.jpg" alt="">
+                <h3>
+                    Prof. Eric Paulos
+                </h3>
+            </div>
+        </div>
+
+                       <div class="row">
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/hettienne.jpg" alt="">
+                <h3>
+                    Hettienne Park
+                </h3>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/lucy-park.gif" alt="">
+                <h3>
+                    Asian American women in media!
+                </h3>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/lucy.jpg" alt="">
+                <h3>
+                    Lucy Liu
+                </h3>
+            </div>
+        </div>
+
+                       <div class="row">
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/sherlock.jpg" alt="">
+                <h3>
+                    Sherlock aka Benedict Cumberbatch
+                </h3>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/johnlock.gif" alt="">
+                <h3>
+                    Johnlock aka white men who cares
+                </h3>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/john.jpg" alt="">
+                <h3>
+                    John aka Martin Freeman
+                </h3>
+            </div>
+        </div>
+
+                       <div class="row">
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/h.jpg" alt="">
+                <h3>
+                    Hugh Dancy aka Will Graham
+                </h3>
+
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/hannigram.gif" alt="">
+                <h3>
+                    Madancy/Hannigram (is canon)
+                </h3>
+                <p>I have a lot of feelings about this. Come talk to be about Hannigram.</p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/m.jpg" alt="">
+                <h3>
+                    Mads Mikkelsen aka Hannibal Lecter
+                </h3>
+            </div>
+        </div>
+                       <div class="row">
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/me-young.jpg" alt="">
+                <h3>
+                    It's young me (at 7)!
+                </h3>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/me.gif" alt="">
+                <h3>
+                    13 years, and not much has changed.
+                </h3>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/me-now.jpg" alt="">
+                <h3>
+                    It's current me (at 20)!
+                </h3>
+            </div>
+        </div>
+
+                       <div class="row">
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/me-sufjan.jpg" alt="">
+                <h3>
+                    It's me.
+                </h3>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/sufjan.gif" alt="">
+                <h3>
+                    I could also probably achieve this by lifting and reading the Bible.
+                </h3>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/sufjan.jpg" alt="">
+                <h3>
+                    It's Sufjan Stevens.
+                </h3>
+            </div>
+        </div>
+                     <div class="row">
+            <div class="col-lg-12">
+                <p><h2>Middle Images</h2></p><br/>
+            </div>
+        </div>
+       <div class="row">
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/ex/actual_fin.jpg" alt="">
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/im7.jpg" alt="">
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/im7 2.jpg" alt="">
+            </div>
+        </div>
+              <div class="row">
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/im7 3.jpg" alt="">
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/im7 4.jpg" alt="">
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/im7 5.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="page-header">Mean of Danes
+                </h1>
+                <p>I used the 37 faces provided in <a href="http://www2.imm.dtu.dk/~aam/datasets/datasets.html">this</a> dataset to calcualte the mean face of some Danish people. I did this by first calculating the average shape, and warping each individual person's face into that shape. You can see all 37 <a href="https://www.dropbox.com/sh/wqy9lg578gt1x3c/AADTXnOh36vjg2OqNadjlihSa?dl=0">here</a>, and below are 3 I found interesting. Note that the control points were only defined on the face, so there are a lot of strange forehead warps.</p> <br/>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/download.png" alt="">
+            </div>
+        </div>
+              <div class="row">
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/d1.jpg" alt="">
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/d2.jpg" alt="">
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/d3.jpg" alt="">
+            </div>
+        </div>
+                <div class="row">
+            <div class="col-lg-12">
+                <p>After that, it was a simple matter of averaging. I warped my face shape into that of the Danish, and then the average Danish person me.</p> <br/>
+            </div>
+        </div>
+                      <div class="row">
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/final.jpg" alt="">
+                    <p>Averages remove individual blemishes and present us with nice, generic symmetry.</p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/me as dane.jpg" alt="">
+                <p>Me with the average Danish facial structure.</p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/danes as me.jpg" alt="">
+            <p>The average Danish person with my facial structure.</p>
+            </div>
+        </div>
+
+<div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Caricatures
+                    
+                </h1>
+                <p>To produce caricatures of people, I first calculated the difference between someone's face shape and the average face shape from a population. I then weighted this by an <i>alpha</i> and added it back onto the original face shape, and morphed to this new shape. </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/mads.jpg" alt="">
+                    <h3>Our Danish friend Mads Mikkelsen again.</h3>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/final.jpg" alt="">
+                <h3>The average dane.</h3>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img class="img-responsive" src="img/mads danish.jpg" alt="">
+            <h3>Mads Mikkelsen 80% more Danish.</h3>
+            </div>
+        </div>
+
+                <div class="row">
+            <div class="col-md-3 portfolio-item">
+                    <img class="img-responsive" src="img/me_c.jpg" alt="">
+                    <h3>Me.</h3>
+            </div>
+            <div class="col-md-3 portfolio-item">
+                    <img class="img-responsive" src="img/cm.jpg" alt="">
+                <h3>The average Chinese face.</h3>
+            </div>
+            <div class="col-md-3 portfolio-item">
+                    <img class="img-responsive" src="img/more-chin-5.jpg" alt="">
+            <h3>Me 50% more Chinese.</h3>
+            </div>
+            <div class="col-md-3 portfolio-item">
+                    <img class="img-responsive" src="img/more-chin-8.jpg" alt="">
+            <h3>Me 80% more Chinese.</h3>
+            </div>
+        </div>
+
+<div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Bell & Whistle: Changing My Gender
+                    
+                </h1>
+                <p>On the same vein as caricatures, I took the average mainlander Chinese man and Chinese woman to see what I would look like if my face weren't so deliberately gender neutral.</p>
+            </div>
+        </div>
+                <div class="row">
+            <div class="col-md-3 portfolio-item">
+                    <img class="img-responsive" src="img/me_c.jpg" alt="">
+                    <h3>Me.</h3>
+            </div>
+            <div class="col-md-3 portfolio-item">
+                    <img class="img-responsive" src="img/cm.jpg" alt="">
+                <h3>The average Chinese male.</h3>
+            </div>
+            <div class="col-md-3 portfolio-item">
+                    <img class="img-responsive" src="img/cw.jpg" alt="">
+            <h3>The average Chinese female.</h3>
+            </div>
+            <div class="col-md-3 portfolio-item">
+                    <img class="img-responsive" src="img/cpts.png" alt="">
+            <h3>Point definition.</h3>
+            </div>
+        </div>
+
+                <div class="row">
+            <div class="col-md-3 portfolio-item">
+                    <img class="img-responsive" src="img/appear_m.jpg" alt="">
+                    <h3>Color morph only (m)</h3>
+            </div>
+            <div class="col-md-3 portfolio-item">
+                    <img class="img-responsive" src="img/appear_w.jpg" alt="">
+                <h3>Color morph only (f)</h3>
+            </div>
+            <div class="col-md-3 portfolio-item">
+                    <img class="img-responsive" src="img/me-man-8.jpg" alt="">
+            <h3>Shape morph only (m).</h3>
+            </div>
+            <div class="col-md-3 portfolio-item">
+                    <img class="img-responsive" src="img/me-woman-8.jpg" alt="">
+            <h3>Shape morph only (f).</h3>
+            </div>
+        </div>
+                <div class="row">
+            <div class="col-md-3 portfolio-item">
+                    <img class="img-responsive" src="img/me-man.jpg" alt="">
+                    <h3>Color & shape morph 50% (m)</h3>
+                    <p>Male me = bushier eyebrows...</p>
+            </div>
+            <div class="col-md-3 portfolio-item">
+                    <img class="img-responsive" src="img/me-man-5.jpg" alt="">
+                <h3>Color & shape morph 80% (m)</h3>
+            </div>
+            <div class="col-md-3 portfolio-item">
+                    <img class="img-responsive" src="img/me-woman.jpg" alt="">
+            <h3>Color & shape morph 50% (f)</h3>
+            <p>Female me = higher cheekbones...</p>
+            </div>
+            <div class="col-md-3 portfolio-item">
+                    <img class="img-responsive" src="img/me-woman-5.jpg" alt="">
+            <h3>Color & shape morph 80% (f)</h3>
+            </div>
+        </div>
+
+
+
+<div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Bell & Whistle: Music Video
+                    
+                </h1>
+                <p>This is probably the pinnacle of my CS career. I took Neil Cicierega's mash up of a John Lennon and Smash Mouth song and, well...just watch it. If you would like to the video in gif form, it's <a href="https://www.dropbox.com/s/ydty3qqevim0pb9/the-pinnacle-of-my-education.gif?dl=0">here</a>.</p>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/byQWuadjpTU" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+<div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Bell & Whistle: Class Music Video
+                    
+                </h1>
+                <p>I participated in it by putting my face in the pool.</p>
+            </div>
+        </div>
+
+
+<div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Takeaways
+                    
+                </h1>
+                <p>This project was super cool, and not just because I could become Sufjan Stevens. It's incredibly beautiful how we can triangulate things relatively arbitrarily yet their boundaries will be continuous. If I had more time, I would try to make my code faster with smarter matrix masking--it took almost an hour to "render" the 55 frames for the video. Solidarity to the rendering folks out there.</p>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
