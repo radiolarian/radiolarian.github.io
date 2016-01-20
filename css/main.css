@@ -137,8 +137,8 @@ label[for="nav-trigger"] {
 
 }
 .nav-trigger:checked ~ .site-wrap {
-    top: 300px;
-    margin-bottom: 300px;
+    top: 310px;
+    margin-bottom: 310px;
 }
 
 .nav-trigger + label, .site-wrap {
@@ -191,4 +191,40 @@ span.port-caption {
 .portfolio-item:hover figcaption {
 	opacity: 1;
 
+}
+
+
+@media (min-width: 420px) and (max-width: 768px){ /*weird medium*/
+	.name, .lastname{
+		margin-left: -100px;
+	}
+	.me-photo {
+		margin:auto;
+		width:200px;
+	}
+	.nav-trigger:checked ~ .site-wrap {
+	    top: 600px;
+	    margin-bottom: 600px;
+	}
+}
+
+@media (max-width: 420px){ /*mobile*/
+	.name, .lastname{
+		margin-left: -100px;
+	}
+	.me-photo {
+		margin:auto;
+		width:200px;
+	}
+	.nav-trigger:checked ~ .site-wrap {
+	    top: 750px;
+	    margin-bottom: 750px;
+	}
+}
+
+@media (min-width: 900px){ /*large displays*/
+	.me-photo {
+		margin:auto;
+		width:180px;
+	}
 }
