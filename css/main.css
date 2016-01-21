@@ -60,13 +60,22 @@ footer {
 }
 
 .fixed-about {
-    display: block;
     position: absolute;
     z-index: 0;
     overflow: none;
     height:40px;
 	padding-right: 15%;
 	padding-top: 10px;
+}
+
+.white {
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+    background-color: #fff;
+    overflow: none;
+    height:500px;
+    width: 70%;
 }
 
 .site-wrap {
@@ -141,8 +150,17 @@ label[for="nav-trigger"] {
     margin-bottom: 310px;
 }
 
+.nav-trigger:checked ~ .white {
+    opacity: 0;
+}
+
+
 .nav-trigger + label, .site-wrap {
     transition: top 0.3s;
+}
+
+.nav-trigger + label, .white {
+    transition: opacity 0.3s;
 }
 
 .name {
