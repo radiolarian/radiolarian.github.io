@@ -61,12 +61,8 @@
         <!-- About -->
         <div class = "fixed-about">
             <div class="row">
-                <div class="col-sm-8 about-text">
-                <p>Hi! I'm Jingyi, a third year <a href="http://eecs.berkeley.edu">EECS</a> major at UC Berkeley. I really like making things. </p>
-
-                <p>You may recognize me from teaching <a href="http://teaching.paulos.net/cs160_FL2015/">CS160:</a> <a href="http://teaching.paulos.net/cs160_SP2016/">UI Design & Development</a>, or from hanging around <a href="http://bid.berkeley.edu">BiD</a>, where I do research under <a href="http://cs.berkeley.edu/~bjoern/">Bjoern Hartmann</a>. Broadly, my research interests are Human-Computer Interaction, Computer Graphics, New Media, and fandom.</p>
-
-                <p>The circle in the corner represents my current hair color. Try dragging the drawing of me towards it!</p>
+                <div class="col-sm-8 about-text" id ="about-text">
+                
                 </div>
                 <div class="col-sm-3">
                         <img class="img-responsive me-photo" src="image/me.png" title="It's me, Jingyi.">
@@ -149,15 +145,15 @@
                 </h3>
             </div>
            <div class="col-sm-6 portfolio-item">
-                <a href="https://www.hackster.io/team-the-regents-and-chancellor-s-association-for-student-disruption/the-you-see-system-4ff39b">
+                <a href="misc">
                     <figure>
-                    <img class="img-responsive" src="image/ucsystem.png">
-                    <figcaption><span class="port-caption">Looking through UC Berkeley's bureaucracy.</span></figcaption>
+                    <img class="img-responsive" src="image/misc.png">
+                    <figcaption><span class="port-caption">I like doing a lot of different things. Stay interesting!</span></figcaption>
                     </figure>
                 </a>
                 <h3>
-                    <a href="https://www.hackster.io/team-the-regents-and-chancellor-s-association-for-student-disruption/the-you-see-system-4ff39b">The You See System</a>
-                    <div class="sub">&nbsp; UX, Art Installation</div>
+                    <a href="misc">Miscellaneous Projects </a>
+                    <div class="sub">&nbsp; Art Installations, Humanities, Etc.</div>
 
                 </h3>
             </div>
@@ -194,34 +190,7 @@
             </div>
             
         </div>
-        <div class="row">
-            <div class="col-sm-6 portfolio-item">
-                <a href="cat">
-                    <figure>
-                    <img class="img-responsive" src="image/cattemp.png">
-                    <figcaption><span class="port-caption">A personal laptop stand fabricated for the pilot Design/Build fall 2014 class.</span></figcaption>
-                    </figure>
-                </a>
-                <h3>
-                    <a href="cat">Cat Laptop Stand</a>
-                    <div class="sub">&nbsp; Fab</div>
-                </h3>
-            </div>
-            <div class="col-sm-6 portfolio-item">
-                <a href="https://www.hackster.io/critical-princesses/magic-abe-ball-856662">
-                    <figure>
-                    <img class="img-responsive" src="image/abeball.png">
-                    <figcaption><span class="port-caption">A hyper-personal momento for Abe, local business owner, to remind him of his dreams.</span></figcaption>
-                    </figure>
-                </a>
-                <h3>
-                    <a href="https://www.hackster.io/critical-princesses/magic-abe-ball-856662">Magic Abe Ball</a>
-                    <div class="sub">&nbsp; UX, Fab</div>
-
-                </h3>
-
-            </div>
-        </div>
+    
         <div class="row">
             <div class="col-sm-6 portfolio-item">
                 <a href="http://jingyili.carbonmade.com">
@@ -287,18 +256,11 @@
     </div>
     <!-- /.container -->
 
-    <!-- circle -->
-    <script>
-      var canvas = document.getElementById("circlecanvas");
-      var context = canvas.getContext("2d");
-      context.arc(90, 90, 190, 0, Math.PI * 2, false);
-      context.fillStyle = '#18BE98';
-      context.fill()
-    </script>
-
     <!-- jQuery -->
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/jquery.lettering-0.6.1.min.js"></script>
+    <script src="js/text.js"></script>
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
