@@ -34,6 +34,12 @@ p {
 	font-size: 1.2em;
 }
 
+
+p.figure-caption {
+	font-size: .9em;
+	padding-top: 3px;
+}
+
 #circlecanvas {
 	z-index: -5;
 	margin-bottom: -450px;
@@ -210,6 +216,10 @@ span.port-caption {
 .portfolio-item:hover figcaption {
 	opacity: 1;
 
+}
+
+p a {
+	text-decoration: underline;
 }
 
 
