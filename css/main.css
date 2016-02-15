@@ -237,8 +237,8 @@ p a {
 		width:200px;
 	}
 	.nav-trigger:checked ~ .site-wrap {
-	    top: 750px;
-	    margin-bottom: 750px;
+	    top: 800px;
+	    margin-bottom: 800px;
 	}
 }
 
