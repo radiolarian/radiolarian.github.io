@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta http-equiv="Content-type" content="small-module-text/html" charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Jingyi Li, Design, Portfolio, Berkeley, Cal, EECS">
+    <meta name="description" content="Jingyi Li. Designer at UC Berkeley. EECS '17.">
+    <meta name="author" content="Jingyi Li">
+    <meta property="og:title" content="Jingyi Li" />
+    <meta property="og:image" content="http://jingyi.me/image/about.png" />
+    <meta property="og:url" content="http://jingyi.me" />
+    <meta property="og:description" content="Jingyi Li loves design, and appreciates that you're either sharing their website on social media, or looking at its source code." />
+
+    <title>Jingyi Li: AniME</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="image/favicon.png">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">    
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+
+<body>
+    <canvas id="circlecanvas" width="500" height="500"></canvas>
+    
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="name-container">
+                    <h1 class="name">Jingyi</h1>
+                    <h1 class="page-header lastname" id="lastname">Li </h1>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger"><h3 class="about-button">about</h3></label>
+
+    
+        <!-- About -->
+        <div class = "fixed-about">
+            <div class="row">
+                <div class="col-sm-8 about-text" id ="about-text">
+                
+                </div>
+                <div class="col-sm-3">
+                        <img class="img-responsive me-photo" src="image/me.png" title="It's me, Jingyi.">
+                </div>
+                <div class="col-sm-1"> </div>
+            </div>
+        </div>
+        <div class = "white"></div>
+
+
+
+        
+        <div class="site-wrap">
+        <!-- Projects Row -->
+
+        <div class="row">
+            <div class="col-lg-12 ">
+            <center><iframe width="700" height="394" src="https://www.youtube.com/embed/sF74aTFFP3M" frameborder="0" allowfullscreen></iframe></center>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-12">
+            <br/><br/>
+            <p><b>AniME</b> (stress on the "me") is a Python pipeline which, given a user input photo, automatically generates a corresponding stylized anime portrait. I worked on it with my friend <a href="http://michellenguyen.me/">Michelle Nguyen</a> as our final project for a computational photography course. You can check out the full paper in its we-wrote-this-in-12-hours glory <a href="static/anime.pdf">here</a>, or read the abstract/check out the summarizing pipeline figure below. <b>We're actively working to get up as a web app</b>, so check back soon—we just need to pay for some server storage...</p>
+            </div>
+        </div>
+
+           <div class="row">
+            <div class="col-lg-12 portfolio-item">
+            <br/>
+                    <img class="img-responsive" src="image/pipeline.png">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 ">
+            <p><b>Abstract</b></p>
+            <p>The popularity of anime (Japanese animated productions) has transcended cultural boundaries, resulting in high volumes of fan works such as personalized avatars. However, drawing aesthetically pleasing anime is a craft that takes a long time to develop. AniME (pronounced ani-mee) is a pipeline which integrates computer vision, computational photography, and data-driven frameworks to automatically generate an anime-style portrait from a user given photo. Our approach renders the corresponding lineart using landmark facial annotations, while features such as eye shape and hairstyle are obtained via template matching to a hand-drawn library of anime eyes and hairstyles. Finally, colors of the anime portraiture are determined through simple averaging and clustering of selected image patches. We validate our tool using photos of people of varying genders, ethnicity, and hair styles.</p>
+            </div>
+        </div>
+    
+      
+        <!-- /.row -->
+        </div> <!-- /site wrap -->
+
+
+
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-md-2 text-left"> <a href="/index.html">&larr; Back</a> </div>
+                <div class="col-md-10 text-right">
+                    
+                    <a href="mailto:noon[at]berkeley.edu">noon@berkeley.edu</a> &nbsp;
+                    <a href="https://www.linkedin.com/pub/jingyi-li/92/b43/757"><i class="fa fa-linkedin"></i></a> &nbsp;
+                    <a href="https://github.com/radiolarian/"><i class="fa fa-github"></i></a> &nbsp;
+                    <a href="https://hackster.io/noon/"><i class="fa fa-bolt"></i></a>
+                    
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <br/>
+    <div class="hacky">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/jquery.lettering-0.6.1.min.js"></script>
+    <script src="js/text.js"></script>
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/analytics.js"></script>
+
+
+    <script>
+      $(document).ready(function() {
+        $(".name").lettering();
+        $(".lastname").lettering();
+      });
+    </script>
+
+</body>
+
+</html>
