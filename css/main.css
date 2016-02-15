@@ -223,34 +223,25 @@ p a {
 }
 
 
-@media (min-width: 420px) and (max-width: 768px){ /*weird medium*/
+@media (max-width: 768px){ /*mobile*/
 	.name, .lastname{
 		margin-left: -100px;
+		font-size: 7em;
+		line-height: 1.15em;
 	}
+
+	#lastname .char1 {padding-left:57px; letter-spacing:-3px;}
+
 	.me-photo {
 		margin:auto;
 		width:200px;
 	}
 	.nav-trigger:checked ~ .site-wrap {
-	    top: 600px;
-	    margin-bottom: 600px;
+	    top: 750px;
+	    margin-bottom: 750px;
 	}
 }
 
-@media (max-width: 420px){ /*mobile*/
-	.name, .lastname{
-		margin-left: -100px;
-		font-size: 6em;
-	}
-	.me-photo {
-		margin:auto;
-		width:200px;
-	}
-	.nav-trigger:checked ~ .site-wrap {
-	    top: 800px;
-	    margin-bottom: 800px;
-	}
-}
 
 @media (min-width: 900px){ /*large displays*/
 	.me-photo {
