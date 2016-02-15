@@ -55,6 +55,9 @@ p.figure-caption {
 	padding-left: 100px;
 	margin-top: -10px;
 }
+.name-container a:hover {
+	color: #24323d; text-decoration: none;
+}
 .portfolio-item {
     margin-bottom: 25px;
 }
