@@ -240,14 +240,15 @@ p a {
 @media (max-width: 420px){ /*mobile*/
 	.name, .lastname{
 		margin-left: -100px;
+		font-size: 6em;
 	}
 	.me-photo {
 		margin:auto;
 		width:200px;
 	}
 	.nav-trigger:checked ~ .site-wrap {
-	    top: 750px;
-	    margin-bottom: 750px;
+	    top: 800px;
+	    margin-bottom: 800px;
 	}
 }
 
