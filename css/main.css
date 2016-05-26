@@ -37,8 +37,11 @@ p {
 
 p.figure-caption {
 	font-size: .9em;
-	padding-top: 3px;
+	padding-top: 1em;
+	text-align: center;
 }
+
+
 
 #circlecanvas {
 	z-index: -5;
