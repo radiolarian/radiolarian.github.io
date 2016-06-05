@@ -7,9 +7,11 @@ context.fill();
 
 var div = document.getElementById("about-text");
 
-div.innerHTML = div.innerHTML + '<p>Hi! I\'m Jingyi, a third year <a href="http://eecs.berkeley.edu">EECS</a> major at UC Berkeley. I really like making things, and enabling others to do the same.</p>'
+div.innerHTML = div.innerHTML + '<p>Hi! I\'m Jingyi, a fourth year <a href="http://eecs.berkeley.edu">EECS</a> major at UC Berkeley. I really like making things, and enabling others to do the same.</p>'
 +
 	'<p>You may recognize me from teaching <a href="http://teaching.paulos.net/cs160_FL2015/">CS160:</a> <a href="http://teaching.paulos.net/cs160_SP2016/">UI Design & Development</a>, or from hanging around <a href="http://bid.berkeley.edu">BiD</a>, where I do research under <a href="http://cs.berkeley.edu/~bjoern/">Bjoern Hartmann</a>. Broadly, my research interests are Human-Computer Interaction, Computer Graphics, New Media, and fandom.</p>'
++
+	'<p>This summer, I\'m working as a front-end engineering intern at <a href="http://juji.io">Juji</a> and a design consultant at <a href="http://sumupanalytics.com/">SumUp Analytics</a>.</p>'
 +
 	'<p>The circle in the corner represents my current hair color. Try dragging the drawing of me towards it!</p>';
 

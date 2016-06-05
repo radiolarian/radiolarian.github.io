@@ -158,7 +158,7 @@ label[for="nav-trigger"] {
 
 }
 .nav-trigger:checked ~ .site-wrap {
-    top: 310px;
+    top: 340px;
     margin-bottom: 310px;
 }
 
@@ -245,6 +245,13 @@ p a {
 	.nav-trigger:checked ~ .site-wrap {
 	    top: 800px;
 	    margin-bottom: 800px;
+	}
+}
+
+@media (max-width: 990px){ /*med displays*/
+	.nav-trigger:checked ~ .site-wrap {
+	    top: 410px;
+	    margin-bottom: 410px;
 	}
 }
 
