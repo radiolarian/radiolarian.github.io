@@ -1,7 +1,7 @@
 var canvas = document.getElementById("circlecanvas");
 var context = canvas.getContext("2d");
 context.arc(90, 90, 190, 0, Math.PI * 2, false);
-context.fillStyle = "#ECC266";
+context.fillStyle = "#2E55B6";
 context.fill();
 
 
