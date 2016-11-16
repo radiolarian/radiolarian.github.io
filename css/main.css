@@ -157,10 +157,7 @@ label[for="nav-trigger"] {
     z-index: 2; 
 
 }
-.nav-trigger:checked ~ .site-wrap {
-    top: 340px;
-    margin-bottom: 310px;
-}
+
 
 .nav-trigger:checked ~ .white {
     opacity: 0;
@@ -229,6 +226,11 @@ p a {
 }
 
 
+.nav-trigger:checked ~ .site-wrap {
+    top: 390px;
+    margin-bottom: 390px;
+}
+
 @media (max-width: 768px){ /*mobile*/
 	.name, .lastname{
 		margin-left: -100px;
@@ -248,13 +250,12 @@ p a {
 	}
 }
 
-@media (max-width: 990px){ /*med displays*/
+@media (max-width: 992px && min-width: 768px){ /*med displays*/
 	.nav-trigger:checked ~ .site-wrap {
-	    top: 410px;
-	    margin-bottom: 410px;
+	    top: 450px;
+	    margin-bottom: 450px;
 	}
 }
-
 
 @media (min-width: 900px){ /*large displays*/
 	.me-photo {
@@ -262,3 +263,4 @@ p a {
 		width:180px;
 	}
 }
+
