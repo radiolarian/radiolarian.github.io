@@ -11,7 +11,7 @@ div.innerHTML = div.innerHTML + '<p>Hi! I\'m Jingyi, a fourth year <a href="http
 +
 	'<p>I currently do research under <a href="http://cs.berkeley.edu/~bjoern/">Bjoern Hartmann</a> in the <a href="http://bid.berkeley.edu">Berkeley Institute of Design</a>, and am teaching <a href="inst.eecs.berkeley.edu/~cs184/fa16">CS 184: Computer Graphics</a>. For the past year, I also taught <a href="http://teaching.paulos.net/cs160_FL2015/">CS160:</a> <a href="http://teaching.paulos.net/cs160_SP2016/">UI Design</a>. Broadly, my research interests include design tools for digital fabrication, some intersection of computer graphics, vision, and computational photography, and fan cultures.</p>'
 +
-	'<p>I\'m graduating a semester early to take a design internship at NVIDIA. After that, I hope to continue my research through a PhD program in HCI! I use they/them pronouns.</p>'
+	'<p>I\'m graduating a semester early to take a design internship at <a href="http://nvidia.com">NVIDIA</a>. After that, I hope to continue my research through a PhD program in HCI! I use they/them pronouns.</p>'
 
 +
 	'<p>The circle in the corner represents my current hair color. Try dragging the drawing of me towards it!</p>';
