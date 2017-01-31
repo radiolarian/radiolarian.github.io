@@ -121,7 +121,7 @@ h3 {
 
 
 div.about-text a {
-	color: #2E55B6;
+	color: #E2739F;
 }
 
 
@@ -158,6 +158,10 @@ label[for="nav-trigger"] {
 
 }
 
+details summary::-webkit-details-marker {
+  display:none;
+}
+summary { outline:none; }
 
 .nav-trigger:checked ~ .white {
     opacity: 0;
