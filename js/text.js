@@ -1,13 +1,12 @@
 var canvas = document.getElementById("circlecanvas"); var context =
 canvas.getContext("2d"); context.arc(90, 90, 190, 0, Math.PI * 2, false);
-context.fillStyle = "#76E0F5"; context.fill();
+context.fillStyle = "#E2D6B0"; context.fill();
 
 
 var div = document.getElementById("about-text");
 
-div.innerHTML = div.innerHTML + '<p>Hi! I\'m Jingyi, a recent <a href="http://eecs.berkeley.edu">EECS</a> graduate from UC Berkeley. I will be starting my Ph.D. at <a href="http://hci.stanford.edu/">Stanford</a> in the fall. I really like making things, and enabling others to do the same.</p>'
-+
-	'<p>At Berkeley, I did research under <a href="http://cs.berkeley.edu/~bjoern/">Bjoern Hartmann</a> in the <a href="http://bid.berkeley.edu">Berkeley Institute of Design</a>. I was also a teaching assistant for <a href="inst.eecs.berkeley.edu/~cs184/fa16">CS 184: Computer Graphics</a> and <a href="http://teaching.paulos.net/cs160_FL2015/">CS160:</a> <a href="http://teaching.paulos.net/cs160_SP2016/">UI Design</a>. Broadly, my research interests include using computation to make things (digital fabrication) and advance media (computational photography), and understanding how humans participate in creation (fandom). I use they/them pronouns.</p>'
+div.innerHTML = div.innerHTML + '<p>Hi! I\'m Jingyi, a computer science Ph.D. student at <a href="http://hci.stanford.edu/">Stanford</a> advised by <a href="http://shape.stanford.edu">Sean Follmer</a> and <a href="http://graphics.stanford.edu/~maneesh/">Maneesh Agrawala</a>. I really like making things, and enabling others to do the same. Most of my work focuses on creativity tools or computational fabrication. I did my undergrad at UC Berkeley, where I was advised by Bjoern Hartmann. My pronouns are they/them.</p> '
+
 +
 	'<p>The circle in the corner represents my current hair color. Try dragging the drawing of me towards it!</p>';
 
