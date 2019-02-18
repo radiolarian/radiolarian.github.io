@@ -1,0 +1,35 @@
+- title: Mewsician
+  description: A musical friend to help children intrinsicly realize the joys of practicing.
+  details: proj/mewsician
+  year: 2016
+  thumb: /image/mewsician.png
+  alt: A small cat like toy glowing blue. He likes you.
+
+- title: AdShirt
+  description: Sell yourself. Make money.
+  details: proj/adshirt
+  year: 2016
+  thumb: /image/adshirt.png
+  alt: A logo for adshirt.
+
+- title: AniME
+  description: Automatically generating anime portraits.
+  details: proj/anime
+  year: 2015
+  thumb: /image/aniME.png
+  alt: Left, a selfie of the author. Right, the anime version of that selfie.
+
+- title: G-Pee-S
+  description: An Android app for gender non-conforming folks and wheelchair users to locate nearby safe restrooms.
+  details: proj/gpees
+  year: 2015
+  thumb: /image/gpees.png
+  alt: The G-Pee-S logo, a location pin combined with a toilet.
+
+
+- title: "Ultimate Star Collector: Winner of the Universe"
+  description: A coming-of-age platformer made for the 2014 Queerness & Games conference. <a href="/starcollector">Click to play!</a>
+  details: /starcollector
+  year: 2014
+  thumb: /image/starcollector.png
+  alt: A pixel art logo for the game featuring a cute character.

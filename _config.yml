@@ -1,0 +1,15 @@
+# Site settings
+title: Jingyi Li
+email: jingyili@cs.stanford.edu
+description: > # this means to ignore newlines until "baseurl:"
+  Jingyi Li is an HCI researcher and Computer Science Ph.D. student at Stanford University.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://jingyi.me/" # the base hostname & protocol for your site
+twitter_username: jingyeezy
+github_username:  radiolarian
+
+# Build settings
+markdown: kramdown
+
+plugins:
+- jekyll-email-protect

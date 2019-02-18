@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA;;;;EAIE;AAIF,WAAW;AAEV,6BAA8B;EAC7B,SAAS,EAAE,IAAI;;AAGjB,YAAY;AAEX,OAAQ;EACP,KAAK,EAXO,IAAI;EAahB,gBAAS;IACR,OAAO,EAAE,GAAG;EAGb,gBAAS;IACR,OAAO,EAAE,KAAK;;AAIjB,aAAa;AAEZ,QAAS;EAKP,YAAY,EA7BD,IAAI;;AAiClB,UAAU;AAIP,4BAAa;EACZ,OAAO,EAAE,WAAW",
+"sources": ["../sass/style-xlarge.scss"],
+"names": [],
+"file": "style-xlarge.css"
+}

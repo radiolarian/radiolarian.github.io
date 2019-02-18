@@ -1,0 +1,35 @@
+<!-- Header -->
+    <section id="header" class="skel-layers-fixed">
+        <header>
+            <h1 id="logo"><a class="logo" href="{{ site.baseurl }}/">
+                <span class="name">Jingyi</span> 
+                <span class="lastname" id="lastname">Li</span>
+            </a></h1>
+        </header>
+        <nav id="nav">
+            <ul>
+
+                {% if page.title %}
+                <li><a href="{{ site.baseurl }}/">&larr; Back</a></li>
+                {% else %}
+                <li><a class="scrolly" href="{{ site.baseurl }}#about">About</a></li>
+                <li><a class="scrolly" href="{{ site.baseurl }}#research">Research</a></li>
+                <li><a class="scrolly" href="{{ site.baseurl }}#proj">Projects</a></li>
+                <li><a class="scrolly" href="{{ site.baseurl }}#personal">Personal</a></li>
+                {% endif %}
+
+            </ul>
+        </nav>
+        <footer>
+
+            Pronouns: <span class="highlight">They/them</span><br/>
+
+            <i class="icon fa-envelope small"></i> &nbsp;  <a href="mailto:{{ site.email | encode_email }}">{{ site.email }}</a> <br/>
+
+            <i class="icon fa-twitter"></i> &nbsp; <a href="http://twitter.com/{{site.twitter_username}}">@jingyeezy</a> <br/>
+
+            <i class="icon fa-graduation-cap"></i> &nbsp; <a href="https://scholar.google.com/citations?user=PMVUPvIAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp; <a href="{{ site.baseurl }}/static/CV-Jan19.pdf">CV</a> <br/>
+
+        </footer>
+    </section>
+

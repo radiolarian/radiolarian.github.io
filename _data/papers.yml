@@ -1,0 +1,35 @@
+- title: Editing spatial layouts through tactile templates for people with visual impairments
+  authors: <b>Jingyi Li</b>, Son Kim, Joshua A. Miele, Maneesh Agrawala, Sean Follmer
+  description: An interactive, multimodal authoring tool that lets people who are blind or visually impaired understand and edit spatial layout structures.
+  conference: CHI '19 (Upcoming)
+  details: http://shape.stanford.edu/research/bviLayout/
+  paper-link: /static/PREPRINT-editing-spatial-layouts.pdf
+  thumb: /image/bvi.png
+  alt: A user double taps on a tactile sheet and hears our tool speak information about the layout element.
+
+- title: Direct and immediate drawing with CNC machines
+  authors: <b>Jingyi Li</b>, Jennifer Jacobs, Michelle Chang, Björn Hartmann
+  description: Exploring how to narrow the design-fabrication gap and combine manual art practice with digital fabrication through interactively controlling CNC machines.
+  conference: SCF '17
+  details: false
+  paper-link: https://dl.acm.org/authorize?N675322
+  thumb: /image/linc.png
+  alt: A multicolor large drawing fabricated on a CNC plotter.
+
+- title: "Confiding in and listening to virtual agents: the effect of personality"
+  authors: <b>Jingyi Li</b>, Michelle X. Zhou, Huahai Yang, Gloria Mark
+  description: A field deployment study on how the personalities of virtual agents affect user trust.
+  conference: IUI '17
+  details: /research/juji
+  paper-link: https://dl.acm.org/authorize?N675323
+  thumb: /image/juji.png
+  alt: Two virtual agent avatars; one supposed to be friendly and the other assertive.
+
+- title: "Makers' Marks: physical markup for designing and fabricating functional objects"
+  authors: Valkyrie Savage, Sean Follmer, <b>Jingyi Li</b>, Björn Hartmann
+  description: A fabrication pipeline for creating functional 3D printed objects from clay and stickers.
+  conference: UIST '15
+  details: /research/mmarks
+  paper-link: https://dl.acm.org/authorize?N675324
+  thumb: /image/makersmarks.png
+  alt: Two game controllers, one made from clay and stickers and one 3D printed from the scanned clay model.

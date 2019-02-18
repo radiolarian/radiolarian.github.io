@@ -1,80 +1,9 @@
-<!DOCTYPE HTML>
-<!--
-	Read Only by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-    
-	<head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-type" content="text/html" charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<title>Jingyi Li</title>
-		<meta name="description" content="Jingyi Li is an HCI researcher working on creativity support tools and fabrication. They are a Computer Science Ph.D. student at Stanford University." />
-		<meta name="keywords" content="Jingyi Li, Stanford, Berkeley, CS, Computer Science, HCI, human-computer interaction, design, portfolio, Cal, EECS" />
-		<meta name="author" content="Jingyi Li">
-	    <meta property="og:title" content="Jingyi Li" />
-
-        <link rel="icon" href="image/favicon.png">
-
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="/js/jquery.min.js"></script>
-		<script src="/js/jquery.scrollzer.min.js"></script>
-		<script src="/js/jquery.scrolly.min.js"></script>
-		<script src="/js/skel.min.js"></script>
-		<script src="/js/skel-layers.min.js"></script>
-		<script src="/js/init.js"></script>
-		<script src="/js/lettering.min.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="/css/skel.css" />
-			<link rel="stylesheet" href="/css/style.css" />
-			<link rel="stylesheet" href="/css/style-xlarge.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-	</head>
-		
-    <body>
-        <div id="wrapper">
-        <!-- Header -->
-    <section id="header" class="skel-layers-fixed">
-        <header>
-            <h1 id="logo"><a class="logo" href="/">
-                <span class="name">Jingyi</span> 
-                <span class="lastname" id="lastname">Li</span>
-            </a></h1>
-        </header>
-        <nav id="nav">
-            <ul>
-
-                
-                <li><a class="scrolly" href="#about">About</a></li>
-                <li><a class="scrolly" href="#research">Research</a></li>
-                <li><a class="scrolly" href="#proj">Projects</a></li>
-                <li><a class="scrolly" href="#personal">Personal</a></li>
-                
-
-            </ul>
-        </nav>
-        <footer>
-
-            Pronouns: <span class="highlight">They/them</span><br/>
-
-            <i class="icon fa-envelope small"></i> &nbsp;  <a href="mailto:%6A%69%6E%67%79%69%6C%69@%63%73.%73%74%61%6E%66%6F%72%64.%65%64%75">jingyili@cs.stanford.edu</a> <br/>
-
-            <i class="icon fa-twitter"></i> &nbsp; <a href="http://twitter.com/jingyeezy">@jingyeezy</a> <br/>
-
-            <i class="icon fa-graduation-cap"></i> &nbsp; <a href="https://scholar.google.com/citations?user=PMVUPvIAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp; <a href="/static/CV-Jan19.pdf">CV</a> <br/>
-
-        </footer>
-    </section>
+---
+layout: default
+---
 
 
-            <!-- Main -->
-            <div id="main">
-                <!-- One -->
+<!-- One -->
     <section id="about">
         <div class="container">
 
@@ -99,67 +28,24 @@
             <h2>Research</h2>
                 <div class="features">
 
-                    
+                    {% for paper in site.data.papers %}
 
                     <article>
 
-                        
-                            <img class="image" src="/image/bvi.png" alt="A user double taps on a tactile sheet and hears our tool speak information about the layout element." />
-                        
+                        {% if paper.details %}
+                          <a class="image" href="{{paper.details}}"><img src="{{paper.thumb}}" alt="{{paper.alt}}" /></a>
+                        {% else %}
+                            <img class="image" src="{{paper.thumb}}" alt="{{paper.alt}}" />
+                        {% endif %}
                         <div class="inner small">
-                            <h4>Editing spatial layouts through tactile templates for people with visual impairments</h4>
-                            <p class="authors"><b>Jingyi Li</b>, Son Kim, Joshua A. Miele, Maneesh Agrawala, Sean Follmer</p>
-                            <p class="paper-desc">An interactive, multimodal authoring tool that lets people who are blind or visually impaired understand and edit spatial layout structures.</p>
-                            <p class="paper-meta"> <a href="/static/PREPRINT-editing-spatial-layouts.pdf">Paper (PDF)</a> &nbsp;/&nbsp; <span class="highlight">CHI '19 (Upcoming)</span></p>
+                            <h4>{{paper.title}}</h4>
+                            <p class="authors">{{paper.authors}}</p>
+                            <p class="paper-desc">{{paper.description}}</p>
+                            <p class="paper-meta">{% if paper.details %} <a href="{{paper.details}}">Details</a>  &nbsp;/&nbsp; {% endif %} <a href="{{paper.paper-link}}">Paper (PDF)</a> &nbsp;/&nbsp; <span class="highlight">{{paper.conference}}</span></p>
                         </div>
                     </article>
                     
-                    
-
-                    <article>
-
-                        
-                            <img class="image" src="/image/linc.png" alt="A multicolor large drawing fabricated on a CNC plotter." />
-                        
-                        <div class="inner small">
-                            <h4>Direct and immediate drawing with CNC machines</h4>
-                            <p class="authors"><b>Jingyi Li</b>, Jennifer Jacobs, Michelle Chang, Björn Hartmann</p>
-                            <p class="paper-desc">Exploring how to narrow the design-fabrication gap and combine manual art practice with digital fabrication through interactively controlling CNC machines.</p>
-                            <p class="paper-meta"> <a href="https://dl.acm.org/authorize?N675322">Paper (PDF)</a> &nbsp;/&nbsp; <span class="highlight">SCF '17</span></p>
-                        </div>
-                    </article>
-                    
-                    
-
-                    <article>
-
-                        
-                          <a class="image" href="/research/juji"><img src="/image/juji.png" alt="Two virtual agent avatars; one supposed to be friendly and the other assertive." /></a>
-                        
-                        <div class="inner small">
-                            <h4>Confiding in and listening to virtual agents: the effect of personality</h4>
-                            <p class="authors"><b>Jingyi Li</b>, Michelle X. Zhou, Huahai Yang, Gloria Mark</p>
-                            <p class="paper-desc">A field deployment study on how the personalities of virtual agents affect user trust.</p>
-                            <p class="paper-meta"> <a href="/research/juji">Details</a>  &nbsp;/&nbsp;  <a href="https://dl.acm.org/authorize?N675323">Paper (PDF)</a> &nbsp;/&nbsp; <span class="highlight">IUI '17</span></p>
-                        </div>
-                    </article>
-                    
-                    
-
-                    <article>
-
-                        
-                          <a class="image" href="/research/mmarks"><img src="/image/makersmarks.png" alt="Two game controllers, one made from clay and stickers and one 3D printed from the scanned clay model." /></a>
-                        
-                        <div class="inner small">
-                            <h4>Makers' Marks: physical markup for designing and fabricating functional objects</h4>
-                            <p class="authors">Valkyrie Savage, Sean Follmer, <b>Jingyi Li</b>, Björn Hartmann</p>
-                            <p class="paper-desc">A fabrication pipeline for creating functional 3D printed objects from clay and stickers.</p>
-                            <p class="paper-meta"> <a href="/research/mmarks">Details</a>  &nbsp;/&nbsp;  <a href="https://dl.acm.org/authorize?N675324">Paper (PDF)</a> &nbsp;/&nbsp; <span class="highlight">UIST '15</span></p>
-                        </div>
-                    </article>
-                    
-                    
+                    {% endfor %}
             </div>
 
         </div>
@@ -171,67 +57,19 @@
             <h2>Projects</h2>
             <p>These are older non-research related—but still fun!—things.</p>
             <div class="features">
-                
+                {% for proj in site.data.projects %}
 
                     <article>
 
-                        <a class="image" href="proj/mewsician"><img src="/image/mewsician.png" alt="A small cat like toy glowing blue. He likes you." /></a>
+                        <a class="image" href="{{proj.details}}"><img src="{{proj.thumb}}" alt="{{proj.alt}}" /></a>
                         <div class="inner">
-                            <h4>Mewsician</h4>
-                            <p class="paper-desc">A musical friend to help children intrinsicly realize the joys of practicing.</p>
-                            <p class="paper-meta"><a href="proj/mewsician">Details</a>  &nbsp;/&nbsp; 2016 </p>
+                            <h4>{{proj.title}}</h4>
+                            <p class="paper-desc">{{proj.description}}</p>
+                            <p class="paper-meta"><a href="{{proj.details}}">Details</a>  &nbsp;/&nbsp; {{proj.year}} </p>
                         </div>
                     </article>
                     
-                
-
-                    <article>
-
-                        <a class="image" href="proj/adshirt"><img src="/image/adshirt.png" alt="A logo for adshirt." /></a>
-                        <div class="inner">
-                            <h4>AdShirt</h4>
-                            <p class="paper-desc">Sell yourself. Make money.</p>
-                            <p class="paper-meta"><a href="proj/adshirt">Details</a>  &nbsp;/&nbsp; 2016 </p>
-                        </div>
-                    </article>
-                    
-                
-
-                    <article>
-
-                        <a class="image" href="proj/anime"><img src="/image/aniME.png" alt="Left, a selfie of the author. Right, the anime version of that selfie." /></a>
-                        <div class="inner">
-                            <h4>AniME</h4>
-                            <p class="paper-desc">Automatically generating anime portraits.</p>
-                            <p class="paper-meta"><a href="proj/anime">Details</a>  &nbsp;/&nbsp; 2015 </p>
-                        </div>
-                    </article>
-                    
-                
-
-                    <article>
-
-                        <a class="image" href="proj/gpees"><img src="/image/gpees.png" alt="The G-Pee-S logo, a location pin combined with a toilet." /></a>
-                        <div class="inner">
-                            <h4>G-Pee-S</h4>
-                            <p class="paper-desc">An Android app for gender non-conforming folks and wheelchair users to locate nearby safe restrooms.</p>
-                            <p class="paper-meta"><a href="proj/gpees">Details</a>  &nbsp;/&nbsp; 2015 </p>
-                        </div>
-                    </article>
-                    
-                
-
-                    <article>
-
-                        <a class="image" href="/starcollector"><img src="/image/starcollector.png" alt="A pixel art logo for the game featuring a cute character." /></a>
-                        <div class="inner">
-                            <h4>Ultimate Star Collector: Winner of the Universe</h4>
-                            <p class="paper-desc">A coming-of-age platformer made for the 2014 Queerness & Games conference. <a href="/starcollector">Click to play!</a></p>
-                            <p class="paper-meta"><a href="/starcollector">Details</a>  &nbsp;/&nbsp; 2014 </p>
-                        </div>
-                    </article>
-                    
-                
+                {% endfor %}
 
             </div>
         </div>
@@ -248,17 +86,3 @@
         </div>
     </section>
 
-
-
-            </div>
-        <!-- Footer -->
-    <section id="footer">
-        <div class="container">
-            <span class="small">Last updated Jan 2019</span>
-        </div>
-    </section>
-
-    <script src="/js/main.js"></script>
-		</div>
-	</body>
-</html>
