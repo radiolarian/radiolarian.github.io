@@ -1,7 +1,7 @@
 - title: Editing spatial layouts through tactile templates for people with visual impairments
   authors: <b>Jingyi Li</b>, Son Kim, Joshua A. Miele, Maneesh Agrawala, Sean Follmer
   description: An interactive, multimodal authoring tool that lets people who are blind or visually impaired understand and edit spatial layout structures.
-  conference: CHI '19 (Upcoming)
+  conference: CHI '19
   details: http://shape.stanford.edu/research/bviLayout/
   paper-link: /static/PREPRINT-editing-spatial-layouts.pdf
   thumb: /image/bvi.png
