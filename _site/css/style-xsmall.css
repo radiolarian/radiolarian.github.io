@@ -14,15 +14,12 @@ body, input, select, textarea {
   display: block; }
 
 .about-text {
-  margin: 0 0 2.25em 0;
-  padding-right: 0; }
+  margin: 0 2.25em 0 0;
+  padding-left: 0; }
 
 .about-photo {
   display: block !important;
   margin: 0 auto; }
-
-.features article .inner {
-  font-size: 1em; }
 
 /* List */
 ul.actions {
