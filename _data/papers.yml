@@ -1,3 +1,12 @@
+- title: Supporting visual artists in programming through direct inspection and control of program execution
+  authors: <b>Jingyi Li</b>, Joel Brandt, Radomír Měch, Maneesh Agrawala, Jennifer Jacobs
+  description: Helping manual artists understand and author programs with visual inspectors on their artwork, looping past inputs, and touching artwork to jump program state.
+  conference: CHI '20 (to appear)
+  details: false
+  paper-link: /static/PREPRINT-Understanding_Symbolic_Programming.pdf
+  thumb: /image/ddb.png
+  alt: DDB links visual inspectors in the drawing environment with numerical inspectors in the programming environment.
+
 - title: Editing spatial layouts through tactile templates for people with visual impairments
   authors: <b>Jingyi Li</b>, Son Kim, Joshua A. Miele, Maneesh Agrawala, Sean Follmer
   description: An interactive, multimodal authoring tool that lets people who are blind or visually impaired understand and edit spatial layout structures.
