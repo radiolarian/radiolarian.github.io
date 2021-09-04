@@ -1,9 +1,20 @@
+- title: Automated accessory rigs for layered 2d character illustrations
+  authors: <b>Jingyi Li</b>, Wilmot Li, Sean Follmer, Maneesh Agrawala
+  description: Introducing four types of constraints to automatically rig clothing and accessories to the body of 2D character, enabling further customizations (like shape changes) for mix-and-match characters beyond simply choosing accessories. 
+  conference: UIST '21
+  details: false
+  paper-link: /static/PREPRINT-autorigging_accessories.pdf
+  thumb: /image/accessories.png
+  alt: Our four types of constraints demonstrated on various clothing and body parts--occlusion, at a single point, boundary, and overlapping region. 
+
+
+
 - title: What we can learn from visual artists about software development
   authors: <b>Jingyi Li</b>, Sonia Hashim, Jennifer Jacobs
   description: A thematic analysis of interviews with 13 professional artists on why and how they choose to use (or not use) software in their work.
   conference: CHI '21
   details: false
-  paper-link: https://arxiv.org/abs/2101.11218
+  paper-link: https://dl.acm.org/doi/pdf/10.1145/3411764.3445682
   thumb: /image/artists-software.png
   alt: A collection of artwork made by our interviewed artists.
 
