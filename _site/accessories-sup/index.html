@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>UIST 2021 Supplemental</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <style>
+      .result {
+        max-height: 400px;
+        max-width: 400px;
+       }
+       body {
+        padding: 2em;
+       }
+
+     </style>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <h1>Automated Accessory Rigs for Layered 2D Character Illustrations</h1>
+        <h2>Supplemental materials</h2>
+
+
+    </body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
+
+<script id="entry-template" type="text/x-handlebars-template">
+{{#list data}}
+{{/list}}
+</script>
+
+<script>
+  var context = {
+  data: {
+    type: ["blazer", "bowtie", "button", "coat", "kimono", "open", "polka", "scrubs", "steph", "xmas", "xmas2"],
+    shapes: ["tri", "round", "hourglass", "chibi", "run", "sit"],  
+    type2: ["chair", "kneel", "squat", "recline", "slouch", "kneeup", "waist", "chat", "cross", "point", "walk", "singlehip"],
+    shapes2: ["org", "tri", "round", "hour", "short"],    
+    },
+  };
+
+
+  Handlebars.registerHelper("list", function(context, options) {
+  var ret = "";
+  var dir = "img/";
+  var description = {"tri" : "Broadening shoulders", 
+  "round": "Widening belly",
+  "hourglass" : "Hourglass figure",
+  "hour" : "Hourglass figure",
+  "chibi" : "Shorter proportions",
+  "short" : "Shorter proportions",
+  "run" : "Taking a step",
+  "sit" : "Sitting",
+  "org": "Original"
+  } 
+  for (var j = 0; j < context.shapes.length; j++) {
+    ret = ret + "<h3> Deformation: " + description[context.shapes[j]] + "</h3>";
+    ret = ret + "<img class='result' src='" + dir + context.shapes[j] + "/base.png'/>";
+  ret = ret + "<img class='result' src='" + dir + context.shapes[j] + "/deform.png'/>"; 
+    for (var i = 0; i < context.type.length; i++) {
+    ret = ret + "<img class='result' src='" + dir + context.shapes[j] + "/" + context.type[i] + "-b.png'/>";
+    ret = ret + "<img class='result' src='" + dir + context.shapes[j] + "/" + context.type[i] + "-d.png'/>";            
+    ret = ret + "<br/>"; 
+    }
+  }
+
+  ret = ret + "<hr/> <h3> Other base poses </h3>";
+  ret = ret + "<b> Presented in deformation order  original, broadening shoulders, widening belly, hourglass figure, shorter proportions.</b><br/>"
+
+  for (var j = 0; j < context.type2.length; j++) {
+    for (var i = 0; i < context.shapes2.length; i++) {
+    ret = ret + "<img class='result' src='" + dir + context.type2[j] + "/" + context.shapes2[i] + "-b.png'/>";
+    ret = ret + "<img class='result' src='" + dir + context.type2[j] + "/" + context.shapes2[i] + "-a.png'/>";    
+    }
+        ret = ret + "<br/>";          
+  }
+
+
+
+  return ret;
+});
+
+var source   = $("#entry-template").html();
+var template = Handlebars.compile(source);
+var html    = template(context);
+
+$('body').append(html);
+
+</script>
+</html>

@@ -1,0 +1,35 @@
+---
+layout: project
+title: "Automated Accessory Rigs for Layered 2D Character Illustrations"
+permalink: research/autorigaccessories/
+type: research
+---
+	<h4>Jingyi Li<sup> 1</sup>, Wilmot Li<sup> 2</sup>, Sean Follmer<sup> 1</sup>, Maneesh Agrawala<sup> 2</sup></h4>
+	<h5><sup>1 </sup>Stanford University, <sup>2</sup>Adobe Research</h5>
+
+<!-- 	<p class="video-container">
+		<iframe class="video" src="https://www.youtube.com/embed/EM7bgipWy6g" frameborder="0" allowfullscreen></iframe>
+	</p>
+ -->
+    <div class="row">
+        <div class="12u">
+            <figure>
+                <img class="image responsive" src="/image/accessories-teaser.png" alt="A person squatting and then reposed with a wide torso, with clothes that do not fit without our rigging, and clothes that do fit with our rigging. Bottom row, the same repose but with different clothes.">
+                <figcaption>Given a collection of layered artwork comprised of "body layers" (A) and "accessory layers" (B) and a user specified deformation to the body layers (C, original overlaid in cyan for comparison), current tools leave the accessory layers unchanged, leading to visual artifacts where the accessories no longer cover the body (D). Our system automatically rigs the accessories with constraints so they properly adapt to the deformation (E). Mix-and-match character creation data sets like <a href="https://www.openpeeps.com/">Open Peeps</a> provide various accessory layers; our system enables the different accessories to automatically adapt to the same underlying body deformation (F-H).</figcaption>
+            </figure>
+        </div>
+    </div> 
+    <h3>Abstract</h3>
+    <p>Mix-and-match character creation tools enable users to quickly produce 2D character illustrations by combining various predefined accessories, like clothes and hairstyles, which are represented as separate, interchangeable artwork layers. However, these accessory layers are often designed to fit only the default body artwork, so users cannot modify the body without manually updating all the accessory layers as well. To address this issue, we present a method that captures and preserves important relationships between artwork layers so that the predefined accessories adapt with the character’s body. We encode these relationships with four types of constraints that handle common interactions between layers: (1) occlusion, (2) attachment at a point, (3) coincident boundaries, and (4) overlapping regions. A rig is a set of constraints that allow a motion or deformation specifed on the body to transfer to the accessory layers. We present an automated algorithm for generating such a rig for each accessory layer, but also allow users to select which constraints to apply to specifc accessories. We demonstrate how our system supports a variety of modifcations to body shape and pose using artwork from mix-and-match data sets.</p>
+
+
+    <h3>Materials</h3>
+
+    <p class="underline"><a href="/static/PREPRINT-autorigging_accessories.pdf">Paper (PDF)</a></p>
+    <p class="underline"><a href="/accessories-sup/index.html">Supplemental results</a></p>
+
+    <p>Video coming soon! (Whenever the ACM YouTube channel uploads it...)</p>
+    <p>Talk coming soon!</p>
+
+    
+    <!-- add bibtex -->

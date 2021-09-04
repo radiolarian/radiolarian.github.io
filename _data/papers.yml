@@ -2,7 +2,7 @@
   authors: <b>Jingyi Li</b>, Wilmot Li, Sean Follmer, Maneesh Agrawala
   description: Introducing four types of constraints to automatically rig clothing and accessories to the body of 2D character, enabling further customizations (like shape changes) for mix-and-match characters beyond simply choosing accessories. 
   conference: UIST '21
-  details: false
+  details: /research/autorigaccessories/
   paper-link: /static/PREPRINT-autorigging_accessories.pdf
   thumb: /image/accessories.png
   alt: Our four types of constraints demonstrated on various clothing and body parts--occlusion, at a single point, boundary, and overlapping region. 

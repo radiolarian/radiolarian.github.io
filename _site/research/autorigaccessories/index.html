@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-type" content="text/html" charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Jingyi Li: Automated Accessory Rigs for Layered 2D Character Illustrations</title>
+		<meta name="description" content="Jingyi Li is an HCI researcher working on creativity support tools and fabrication. They are a Computer Science Ph.D. student at Stanford University." />
+		<meta name="keywords" content="Jingyi Li, Stanford, Berkeley, CS, Computer Science, HCI, human-computer interaction, design, portfolio, Cal, EECS" />
+		<meta name="author" content="Jingyi Li">
+	    <meta property="og:title" content="Jingyi Li" />
+
+        <link rel="icon" href="/image/favicon.png">
+
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/jquery.scrollzer.min.js"></script>
+		<script src="/js/jquery.scrolly.min.js"></script>
+		<script src="/js/skel.min.js"></script>
+		<script src="/js/skel-layers.min.js"></script>
+		<script src="/js/init.js"></script>
+		<script src="/js/lettering.min.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="/css/skel.css" />
+			<link rel="stylesheet" href="/css/style.css" />
+			<link rel="stylesheet" href="/css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+		
+    <body>
+        <div id="wrapper">
+        <!-- Header -->
+    <section id="header" class="skel-layers-fixed">
+        <header>
+            <h1 id="logo"><a class="logo" href="/">
+                <span class="name">Jingyi</span> 
+                <span class="lastname" id="lastname">Li</span>
+            </a></h1>
+        </header>
+        <nav id="nav">
+            <ul>
+
+                
+                <li><a href="/">&larr; Back</a></li>
+                
+
+            </ul>
+        </nav>
+        <footer>
+
+            Pronouns: <span class="highlight">They/them</span><br/>
+
+            <i class="icon fa-envelope small"></i> &nbsp;  <a href="mailto:%6A%69%6E%67%79%69%6C%69@%63%73.%73%74%61%6E%66%6F%72%64.%65%64%75">jingyili@cs.stanford.edu</a> <br/>
+
+            <i class="icon fa-twitter"></i> &nbsp; <a href="http://twitter.com/jingyitweets">@jingyitweets</a> <br/>
+
+            <i class="icon fa-graduation-cap"></i> &nbsp; <a href="https://scholar.google.com/citations?user=PMVUPvIAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp; <a href="/static/CV-Sep21.pdf">CV</a> <br/>
+
+        </footer>
+    </section>
+
+
+            <!-- Main -->
+            <div id="main">
+                <section>
+    <div class="container">
+        <header class="major">
+            
+                <h2 style="font-size:2.25em;">Automated Accessory Rigs for Layered 2D Character Illustrations</h2>
+            
+            
+        </header>
+
+        <section class="post-content">
+            	<h4>Jingyi Li<sup> 1</sup>, Wilmot Li<sup> 2</sup>, Sean Follmer<sup> 1</sup>, Maneesh Agrawala<sup> 2</sup></h4>
+	<h5><sup>1 </sup>Stanford University, <sup>2</sup>Adobe Research</h5>
+
+<!-- 	<p class="video-container">
+		<iframe class="video" src="https://www.youtube.com/embed/EM7bgipWy6g" frameborder="0" allowfullscreen></iframe>
+	</p>
+ -->
+    <div class="row">
+        <div class="12u">
+            <figure>
+                <img class="image responsive" src="/image/accessories-teaser.png" alt="A person squatting and then reposed with a wide torso, with clothes that do not fit without our rigging, and clothes that do fit with our rigging. Bottom row, the same repose but with different clothes.">
+                <figcaption>Given a collection of layered artwork comprised of "body layers" (A) and "accessory layers" (B) and a user specified deformation to the body layers (C, original overlaid in cyan for comparison), current tools leave the accessory layers unchanged, leading to visual artifacts where the accessories no longer cover the body (D). Our system automatically rigs the accessories with constraints so they properly adapt to the deformation (E). Mix-and-match character creation data sets like <a href="https://www.openpeeps.com/">Open Peeps</a> provide various accessory layers; our system enables the different accessories to automatically adapt to the same underlying body deformation (F-H).</figcaption>
+            </figure>
+        </div>
+    </div> 
+    <h3>Abstract</h3>
+    <p>Mix-and-match character creation tools enable users to quickly produce 2D character illustrations by combining various predefined accessories, like clothes and hairstyles, which are represented as separate, interchangeable artwork layers. However, these accessory layers are often designed to fit only the default body artwork, so users cannot modify the body without manually updating all the accessory layers as well. To address this issue, we present a method that captures and preserves important relationships between artwork layers so that the predefined accessories adapt with the character’s body. We encode these relationships with four types of constraints that handle common interactions between layers: (1) occlusion, (2) attachment at a point, (3) coincident boundaries, and (4) overlapping regions. A rig is a set of constraints that allow a motion or deformation specifed on the body to transfer to the accessory layers. We present an automated algorithm for generating such a rig for each accessory layer, but also allow users to select which constraints to apply to specifc accessories. We demonstrate how our system supports a variety of modifcations to body shape and pose using artwork from mix-and-match data sets.</p>
+
+
+    <h3>Materials</h3>
+
+    <p class="underline"><a href="/static/PREPRINT-autorigging_accessories.pdf">Paper (PDF)</a></p>
+    <p class="underline"><a href="/accessories-sup/index.html">Supplemental results</a></p>
+
+    <p>Video coming soon! (Whenever the ACM YouTube channel uploads it...)</p>
+    <p>Talk coming soon!</p>
+
+    
+    <!-- add bibtex -->
+        </section>
+        
+    </div>
+
+</section>
+
+
+            </div>
+        <!-- Footer -->
+    <section id="footer">
+        <div class="container">
+            <span class="small">Last updated Sep 2021</span>
+        </div>
+    </section>
+
+    <script src="/js/main.js"></script>
+		</div>
+	</body>
+</html>
