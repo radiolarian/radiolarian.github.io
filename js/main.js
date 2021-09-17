@@ -5,9 +5,9 @@
     
         //for hair
         var isColored = false;
-        var color1 = '#f5d269';
-        var color2 = '#eb1005';
-        var color3 = '#141312';
+        var color1 = '#2229e6';
+        var color2 = '#00a68d';
+        var color3 = '#a623e8';
         var msg = $(".last-par").html();
 
         $(".last-par").on('click', '#change-hair', function() {
@@ -16,13 +16,13 @@
             console.log(isColored);
             if (isColored) {
                 $('.name > span').each(function () { $(this).css('color', color1); });
-                $(".name > .char3").css('color', color1);
-                $(".name > .char4").css('color', color1);
-                $(".name > .char5").css('color', color1);
-                $(".name > .char6").css('color', color1);
-                $(".name > .char7").css('color', color1);
-                // $('.lastname > span').each(function () { $(this).css('color', color3); });
-                // $(".lastname > .char2").css('color', color1);
+                // $(".name > .char3").css('color', color2);
+                $(".name > .char4").css('color', color3);
+                $(".name > .char5").css('color', color2);
+                $(".name > .char6").css('color', color2);
+                $(".name > .char7").css('color', color2);
+                $('.lastname > span').each(function () { $(this).css('color', color3); });
+                $(".lastname > .char2").css('color', color2);
             }
             else {
                 $('.name > span').each(function () { $(this).css('color', '#333333'); });
