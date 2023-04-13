@@ -1,3 +1,13 @@
+- title: Understanding Version Control as Material Interaction with Quickpose
+  authors: Eric Rawn, <b>Jingyi Li</b>, Eric Paulos, Sarah Chasins
+  description: Quickpose is a version control system for Processing. It explores themes of <i>material interaction</i>, including (1) reciprocal discovery of goals and materials, (2) local knowledge of materials, and (3) annotation for holistic interpretation. 
+  conference: CHI '23
+  details: https://www.ericrawn.media/quickpose
+  paper-link: https://www.ericrawn.media/assets/blog/publications/quickpose/Quickpose_CHI23_Rawn.pdf
+  thumb: /image/quickpose.png
+  alt: A screenshot of the Quickpose app, which shows a graph in which different versions of an artwork are nodes.
+
+
 - title: Automated accessory rigs for layered 2d character illustrations
   authors: <b>Jingyi Li</b>, Wilmot Li, Sean Follmer, Maneesh Agrawala
   description: Introducing four types of constraints to automatically rig clothing and accessories to the body of 2D character, enabling further customizations (like shape changes) for mix-and-match characters beyond simply choosing accessories. 
