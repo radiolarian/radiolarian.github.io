@@ -5,9 +5,9 @@
     
         //for hair
         var isColored = false;
-        var color1 = '#323336';
-        var color2 = '#323336';
-        var color3 = '#78bf8d';
+        var color1 = '#a048cf';
+        var color2 = '#a048cf';
+        var color3 = '#a048cf';
         var msg = $(".last-par").html();
 
         $(".last-par").on('click', '#change-hair', function() {

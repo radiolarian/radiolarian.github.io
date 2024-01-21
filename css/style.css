@@ -845,6 +845,9 @@ input[type="button"],
     padding: 6em 0 4em 0; }
   #main > section:first-child {
     border-top: 0; }
+.container.teaching {
+  padding: 0em !important;
+}
 
 /* One */
 /*#one {

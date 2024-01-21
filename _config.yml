@@ -1,6 +1,6 @@
 # Site settings
 title: Jingyi Li
-email: jingyili@cs.stanford.edu
+email: firstname.lastname@pomona.edu
 description: > # this means to ignore newlines until "baseurl:"
   Jingyi Li is an HCI researcher and Computer Science Ph.D. student at Stanford University.
 baseurl: "" # the subpath of your site, e.g. /blog/

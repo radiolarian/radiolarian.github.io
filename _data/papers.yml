@@ -1,12 +1,13 @@
-- title: Power as a Lens for Creativity Support Tools
+- title: "Beyond the artifact: power as a lens for creativity support tools"
   authors: <b>Jingyi Li</b>, Eric Rawn, Jacob Ritchie, Jasper Tran O'Leary, Sean Follmer
   description: When we see a creativity support tool (CST), we should see a power relationship. From interviews with 11 creative practitioners and tool designers, we build a preliminary theory of how power relationships can manifest in CSTs, and what we could do about it.
   conference: UIST '23
   paper-link: /static/PREPRINT-power-csts.pdf
+  zine: /static/power-cst-zine.pdf
   thumb: /image/power-csts.png
   alt: Top, a word cloud describing concepts of normative ground. Bottom, axes that show vertical movement through layers of abstraction and horizontal movement to other tools as a guide for technical empowerment.
 
-- title: Understanding Version Control as Material Interaction with Quickpose
+- title: Understanding version control as material interaction with Quickpose
   authors: Eric Rawn, <b>Jingyi Li</b>, Eric Paulos, Sarah Chasins
   description: Quickpose is a version control system for Processing. It explores themes of <i>material interaction</i>, including (1) reciprocal discovery of goals and materials, (2) local knowledge of materials, and (3) annotation for holistic interpretation. 
   conference: CHI '23
@@ -16,7 +17,7 @@
   alt: A screenshot of the Quickpose app, which shows a graph in which different versions of an artwork are nodes.
 
 
-- title: Automated accessory rigs for layered 2d character illustrations
+- title: Automated accessory rigs for layered 2D character illustrations
   authors: <b>Jingyi Li</b>, Wilmot Li, Sean Follmer, Maneesh Agrawala
   description: Introducing four types of constraints to automatically rig clothing and accessories to the body of 2D character, enabling further customizations (like shape changes) for mix-and-match characters beyond simply choosing accessories. 
   conference: UIST '21

@@ -18,16 +18,18 @@ layout: default
 
                 <img class="image avatar about-photo" src="image/me.png" alt="A picture of me, Jingyi. My hair color has probably changed." />
                 
-                <p class="about-text">I recently graduated from <a href="https://hci.stanford.edu/">Stanford University</a> where I was co-advised by <a href="https://shape.stanford.edu">Sean Follmer</a> and <a href="https://graphics.stanford.edu/~maneesh/">Maneesh Agrawala</a>. My work focuses on designing interactive tools that scaffold the creative process. I believe in the liberatory power of every day making and investigate how computation can augment these practices without displacing existing manual skills. I did my undergrad at <a href="https://bid.berkeley.edu/">UC Berkeley</a>, where I worked with <a href="https://people.eecs.berkeley.edu/~bjoern/">Björn Hartmann</a>.
-                <br/><br/>
-                I will be joining the CS department of <a href="https://www.pomona.edu/">Pomona College</a> as an assistant professor starting January 2024! Until then, I am enjoying living a life of art and leisure.</p>
+                <p class="about-text">
+                    I'm an Assistant Professor of <a href="https://www.pomona.edu/academics/departments/computer-science">Computer Science at Pomona College</a>, where I direct the <a href="http://doodlelab.sites.pomona.edu/">Doodle Lab</a>. My work focuses on understanding, designing, and critiquing <b>creativity support tools</b>. 
+                    I believe in the liberatory power of every day making and investigate how computation can augment these practices without displacing existing manual skills. <br/><br/>
+
+                    My PhD is from <a href="https://hci.stanford.edu/">Stanford University</a> where I was co-advised by <a href="https://shape.stanford.edu">Sean Follmer</a> and <a href="https://graphics.stanford.edu/~maneesh/">Maneesh Agrawala</a>. I did my undergrad at <a href="https://bid.berkeley.edu/">UC Berkeley</a>, where I worked with <a href="https://people.eecs.berkeley.edu/~bjoern/">Björn Hartmann</a>.
 
 
             </div>
         </div>
     </section>
 
-<!-- Two -->
+<!-- Three -->
     <section id="research">
         <div class="container">
             <h2>Research</h2>
@@ -46,7 +48,9 @@ layout: default
                             <h4>{{paper.title}}</h4>
                             <p class="authors">{{paper.authors}}</p>
                             <p class="paper-desc">{{paper.description}}</p>
-                            <p class="paper-meta">{% if paper.details %} <a href="{{paper.details}}">Details</a>  &nbsp;/&nbsp; {% endif %} <a href="{{paper.paper-link}}">Paper (PDF)</a> &nbsp;/&nbsp; <span class="highlight">{{paper.conference}}</span></p>
+                            <p class="paper-meta">{% if paper.details %} <a href="{{paper.details}}">Details</a>  &nbsp;/&nbsp; {% endif %} 
+                            {% if paper.zine %} <a href="{{paper.zine}}">Zine</a>  &nbsp;/&nbsp; {% endif %} 
+                            <a href="{{paper.paper-link}}">Paper (PDF)</a> &nbsp;/&nbsp; <span class="highlight">{{paper.conference}}</span></p>
                         </div>
                     </article>
                     
@@ -56,7 +60,22 @@ layout: default
         </div>
     </section>
 
-<!-- Three -->
+        <!-- Two -->
+    <section id="teaching">
+        <div class="container teaching">
+            <h2>Teaching</h2>
+                <b> Spring 2024 </b>
+                <ul>
+                    <li><a href="https://cs.pomona.edu/classes/cs181dt/">CS181DT - Computational Design Tools</a></li>
+                    <li><a href="https://cs.pomona.edu/classes/cs51p/">CS51P - Introduction to CS in Python</a> (with <a href="https://cs.pomona.edu/~tzuyi/">Prof. Chen</a>)</li>
+                </ul>
+
+            <p>My office hours for Spring 2024 are Mon/Tues/Wed 4:15-5:15pm in Edmunds 111. If you're a 5C student and would like to grab lunch, sign up with the link posted on my office door.</p>
+
+        </div>
+    </section>
+
+<!-- Four -->
     <section id="proj">
         <div class="container">
             <h2>Projects</h2>
