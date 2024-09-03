@@ -11,7 +11,6 @@
         var msg = $(".last-par").html();
 
         $(".last-par").on('click', '#change-hair', function() {
-            console.log("hi");
             isColored = (isColored ? false : true);
             console.log(isColored);
             if (isColored) {

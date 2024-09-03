@@ -1,3 +1,11 @@
+- title: "Toward appropriating tools for queer use"
+  authors: <b>Jingyi Li</b>
+  description: A short manifesto for the Halfway to the Future Symposium on why HCI should support appropriation and misuse inspired by Sara Ahmed's "What's the Use?".
+  conference: HTTF '24
+  paper-link: /static/httf24.pdf
+  thumb: /image/misuse.png
+  alt: A hammer and some smahed Pokemon game cartridges, signalling misuse? I don't know. It was on Unsplash.
+
 - title: "Beyond the artifact: power as a lens for creativity support tools"
   authors: <b>Jingyi Li</b>, Eric Rawn, Jacob Ritchie, Jasper Tran O'Leary, Sean Follmer
   description: When we see a creativity support tool (CST), we should see a power relationship. From interviews with 11 creative practitioners and tool designers, we build a preliminary theory of how power relationships can manifest in CSTs, and what we could do about it.
